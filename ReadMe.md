@@ -14,6 +14,7 @@ Created By: [Chris Holbrook](http://mad9scientist.com/ "Author's Website")
 2.	Create a directory in the same folder named 'logs'
 3.	In your Print CSS file Include the following code:
 
+```
     body:after, .printracphp-ie{
       background:url(path/to/printrac.php/printrac.php?track) no-repeat;
       content: url(path/to/printrac.php/printrac.php?track);
@@ -21,16 +22,17 @@ Created By: [Chris Holbrook](http://mad9scientist.com/ "Author's Website")
       height: 1px;
       display: block;
     }
+```
 
 4.	Copy and Paste the below code into the header of your pages, before anything else.
 
-```<?php
+```
+<?php
 	$printracPage = $_SERVER['REQUEST_URI'];
 	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
 	echo "<div class='printracphp-ie' style='display:none;'></div>";
 ?>
 ```
-
 5. That's it!
 
 **View Logs**
