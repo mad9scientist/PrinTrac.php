@@ -4,7 +4,7 @@ Created By: [Chris Holbrook](http://mad9scientist.com/ "Author's Website")
 
 **Goal:** This php file tracks how often users print your web pages by using a invisible tracking image that is included in your print stylesheet.
 
-**Tested Browsers:** Firefox 10, Safari 5, Chrome 16, Opera 11.
+**Tested Browsers:** Firefox 10, Safari 5.1, Chrome 17, Opera 11.61, Internet Explorer 8
 
 **Concept and Origin:** This idea is from ShopTalkShow Host Chris Coyier and a user submitted questions (Sorry I don't remember the users name) from Episode 006 with Zoe Gillenwater (http://shoptalkshow.com/episodes/006-with-zoe-gillenwater/ "ShopTalk Show")
 
