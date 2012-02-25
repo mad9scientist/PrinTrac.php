@@ -63,6 +63,7 @@
 	<h2>Try it out!</h2>
 	<p>Open the the below page and do a print preview of that page. Then click the link label View Logs. If you view the newest records at the bottom of the page you should see your IP and the date/time you "Printed" the page.</p>
 	<p><a href="http://mad9scientist.com/projects/printracphp/">PrinTrac.php Demo</a></p>
+	<p><a href="http://mad9scientist.github.com/PrinTrac.php/">Follow PrinTrac.php on GitHub</a></p>
 
 	</article>
 
