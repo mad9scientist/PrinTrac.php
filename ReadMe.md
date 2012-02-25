@@ -8,7 +8,8 @@ Created By: [Chris Holbrook](http://mad9scientist.com/ "Author's Website")
 
 **Concept and Origin:** This idea is from ShopTalkShow Host Chris Coyier and a user submitted questions (Sorry I don't remember the users name) from Episode 006 with Zoe Gillenwater (http://shoptalkshow.com/episodes/006-with-zoe-gillenwater/ "ShopTalk Show")
 
-**Installation:** 
+**Installation:**
+
 1.	Place printrac.php into your site's image directory or anywhere you want.
 2.	Create a directory in the same folder named 'logs'
 3.	In your Print CSS file Include the following code:
@@ -21,6 +22,7 @@ Created By: [Chris Holbrook](http://mad9scientist.com/ "Author's Website")
 	display: block;
 }
 ```
+
 4.	Copy and Paste the below code into the header of your pages, before anything else.
 
 ```<?php
@@ -29,6 +31,7 @@ Created By: [Chris Holbrook](http://mad9scientist.com/ "Author's Website")
 	echo "<div class='printracphp-ie' style='display:none;'></div>";
 ?>
 ```
+
 5. That's it!
 
 **View Logs**
