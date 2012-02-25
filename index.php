@@ -1,6 +1,7 @@
 <?php
 	$printracPage = $_SERVER['REQUEST_URI'];
 	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
+	echo "<div class='printracphp-ie' style='display:none;'></div>";
 ?>
 
 <DOCTYPE HTML>

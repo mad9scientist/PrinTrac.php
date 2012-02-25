@@ -27,6 +27,7 @@ $ver = "0.0.1-concept";
 if(isset($_GET['track'])){track();}
 if(isset($_GET['view']) && $_GET['view'] <> 'gui'){view();}
 if(isset($_GET['view']) && $_GET['view'] === 'gui' || isset($_GET['gui'])){gui();}
+if(isset($_GET['hdrTrackCode'])){hdrTracker();}
 if(isset($_GET['css'])){css();}
 
 function track(){
@@ -57,6 +58,8 @@ function track(){
 		# creates tracking images (only can be called for track function)
 		
 		header("Content-type: image/png");
+		header("Cache-Control: no-cache, must-revalidate");
+		header("Expires: Sat, 1 Jan 2000 00:00:00 GMT");
 		$handle = ImageCreate ($w, $h) or die ("Cannot Create image"); 
 	 	$bg_color = ImageColorAllocateAlpha ($handle, 0, 0, 0, 0); 
 	 	ImagePng ($handle); 
@@ -135,6 +138,12 @@ function gui(){
 
 	# Close Page
 	htmlFooter();
+}
+
+function hdrTracker(){
+	$printracPage = $_SERVER['REQUEST_URI'];
+	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
+	echo "<div class='printracphp-ie' style='display:none;'></div>";
 }
 
 
