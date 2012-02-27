@@ -1,7 +1,7 @@
 <?php 
 
 /*
-	PrinTrac.php (v. 0.0.1)
+	PrinTrac.php (v. 0.1.0)
 		Get Stats on Users Printing Your Web Pages
 		Created by: Chris Holbrook (http://mad9scientist.com/)
 		Licensed Under BSD License
@@ -22,7 +22,7 @@ $filename = "printrac_logs.txt"; 	#Log Filename
 
 /* Global Var */
 $logfile = $location.$filename;
-$ver = "0.0.1-concept";
+$ver = "0.1.0-concept";
 
 /* Function Selector */
 if(isset($_GET['track'])){track();}
