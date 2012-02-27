@@ -9,7 +9,8 @@
 */
 
 /* Settings */
-$location = getcwd()."\logs\\";		#File Location
+#if on Windows change the below line to "\logs\\"
+$location = getcwd()."/logs/";		#File Location 
 $filename = "printrac_logs.txt"; 	#Log Filename
 
 #Google Analytics
