@@ -480,6 +480,7 @@
 		padding:0;
 		width:80%;
 		font-family:sans-serif;
+		color: #fff;
 	}
 
 
@@ -540,22 +541,50 @@
 		color: #eee;
 		border-bottom: none;
 	}
+	#creator{
+		display:block;	
+		color: #fff;
+		width: 32px;
+		height: 32px;
+		border:2px solid #ffffff;
+		background:#336699;
+		font: 36px/0.8 "Tw Cen MT";
+		position:absolute;
+		top:10px;
+		right:10px;
+		text-align:center;
+		border-radius:8px; 
+		-moz-transition: all .5s;
+	}
+		#creator:after{
+			content: "Handcrafted by Mad9Scientist";
+		    display: block;
+		    font: italic bold 12px/1.4em sans-serif;
+		    position: absolute;
+		    right: 42px;
+		    text-align: right;
+		    text-shadow: 0 1px 0 #555555;
+		    top: 0;
+		    width: 90px;
+		}
+		#creator:hover{
+			box-shadow: 0 0 3px 1px #000;
+		}
 	h2 {
-		color: #999;
+		color: #C4C4C4;
 		border-bottom: 2px solid;
-		text-shadow: 0 1px 0 #444;
+		text-shadow: 0 1px 0 #000;
 	}
 
 	article pre, article pre code{
 		width: 80%;
 		padding:8px;
 		background:#222;
-		color: #268bd2;
+		color: GoldenRod; /*#268bd2;*/
 		-webkit-border-radius: 8px;
 		-moz-border-radius: 8px;
 		border-radius: 8px;
 	}
-
 
 
 	footer{
@@ -578,10 +607,40 @@
 		color:#369;
 		border-bottom:1px solid;
 	}
+	.button{
+		background: #369;
+		background: -moz-linear-gradient(top, #369, #09f);
+		width:200px;
+		height: 50px;
+		padding:10px;
+		margin:20px auto 5px;
+		text-align:center;
+		font: 20px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+		border-radius:8px;
+		display: block;
+		box-shadow: 0 1px 3px #09f inset;
+	}
+	.button:hover{
+		background: #09f;
+		background: -moz-linear-gradient(bottom, #369, #09f);
+		box-shadow: 0 1px 3px #000 inset;
+		color:#ddd;
+		text-shadow: 0 -1px 0 #000;
+	}
+	a.button {
+		color:#fff;
+		text-shadow:0 1px 0 #000;
+		text-decoration: none;
+		border:none;
+		padding:0;
+		line-height:50px;
+	}
 	.clear{clear:both;}
 
 	article{
-		background:#fff;
+		
+		background:#333;
+		background: rgba(0,0,0,0.2);
 		-webkit-border-radius: 8px;
 		-moz-border-radius: 8px;
 		border-radius: 8px;
