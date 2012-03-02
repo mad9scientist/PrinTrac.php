@@ -65,7 +65,7 @@
 	<footer>
 		
 		<p>PrinTrac.php is Maintained by <a href="http://mad9scientist.com">Chris Holbrook</a>
-		<?php echo ' &mdash; ' . date('M Y'); ?></p>
+		&mdash; Feb 2012</p>
 	</footer>
 	<script src="printrac.php?js"></script>
 </body>
