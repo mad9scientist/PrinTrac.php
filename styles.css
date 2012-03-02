@@ -2,9 +2,9 @@
 	
 	body:after, .printracphp-ie{
 		background:url(http://192.168.1.102/printrac.php/printrac.php?track) no-repeat;
+		content: url(http://192.168.1.102/printrac.php/printrac.php?track);
 		width: 1px;
 		height: 1px;
-		content: url(http://192.168.1.102/printrac.php/printrac.php?track);
 		display: block;
 	}
 
@@ -473,66 +473,200 @@
 	    border-spacing: 0;
 	}
 
+
+/*  ==============================================================================
+		Custom Styles
+	    ==========================================================================  */
+
+
 	body{
-		background:#888;
+		background:#444;
 		width: 70%;
 		margin:0 auto;
+		padding:0;
+		width:80%;
+		font-family:sans-serif;
+		color: #fff;
 	}
-
-	header{
-		height:100px;
-		background:#000;
-		background:rgba(0,0,0,0.7);
-		color:#f0f0f0;
-		padding:10px;
-		position:relative;
-		-webkit-border-radius: 0 0 25px 25px;
-		-moz-border-radius: 0 0 25px 25px;
-		border-radius: 0 0 25px 25px;
+	header {
+		background: gray;
+		background: -webkit-linear-gradient(bottom, gray, silver);
+		background: -moz-linear-gradient(bottom, gray, silver);
+		background: -o-linear-gradient(bottom, gray, silver);
+		background: -ms-linear-gradient(bottom, gray, silver);
+		background: linear-gradient(bottom, gray, silver);
+		padding: 8px;
+		height: 100px;
+		-webkit-border-radius: 0 0 8px 8px;
+		-moz-border-radius: 0 0 8px 8px;
+		border-radius: 0 0 8px 8px;
+		-webkit-box-shadow: 0 0 2px #000;
+		-moz-box-shadow: 0 0 2px #000;
+		box-shadow: 0 0 2px #000;
+		position: relative;
 	}
-		header span{
-			font-size:14px;
-			position:absolute;
-			bottom: 25px;
-			left: 30px;
+	header h1 {color: #fff;text-shadow: 0 -1px 0px #000;}
+	header span {
+		color: #ddd;
+		position: absolute;
+		bottom: 25px;
+		left: 30px;
+		font-style: italic;
+		text-shadow: 0 1px 0 #000;
+	}
+	header nav {float: right;}
+	header nav ul {list-style:none; bottom: 30px; right: 10px; position: relative;}
+	header nav ul li {float:left; margin-left:8px;}
+	header nav ul li a {
+		color: #eee;
+		text-decoration: none;
+		border: 1px solid #666;
+		padding: 4px 8px;
+		background: #aaa;
+		background: -webkit-linear-gradient(bottom, #aaa, #888);
+		background: -moz-linear-gradient(bottom, #aaa, #888);
+		background: -o-linear-gradient(bottom, #aaa, #888);
+		background: -ms-linear-gradient(bottom, #aaa, #888);
+		background: linear-gradient(bottom, #aaa, #888);
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	header nav ul li a:hover {
+		-webkit-box-shadow: 0 1px 1px 0px #000 inset;
+		-moz-box-shadow: 0 1px 1px 0px #000 inset;
+		box-shadow: 0 1px 1px 0px #000 inset;
+		color: #eee;
+		border-bottom: none;
+	}
+	#creator{
+		display:block;
+		color: #fff;
+		width: 32px;
+		height: 32px;
+		border:2px solid #ffffff;
+		background:#336699;
+		font: 30px/1.1 sans-serif;
+		font: 33px/0.8 "Century Gothic";
+		font: 36px/0.8 "Tw Cen MT";
+		position:absolute;
+		top:10px;
+		right:10px;
+		text-align:center;
+		-webkit-border-radius:8px;
+		-moz-border-radius:8px;
+		border-radius:8px;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		-o-transition: all .5s;
+		-ms-transition: all .5s;
+		transition: all .5s;
+	}
+		#creator:after{
+			content: "Handcrafted by Mad9Scientist";
+			display: block;
+			font: italic bold 12px/1.4em sans-serif;
+			position: absolute;
+			right: 42px;
+			text-align: right;
+			text-shadow: 0 1px 0 #555555;
+			top: 0;
+			width: 90px;
 		}
-	article{
-		background:#fff;
-		-webkit-border-radius: 25px;
-		-moz-border-radius: 25px;
-		border-radius: 25px;
+		#creator:hover{box-shadow: 0 0 3px 1px #000;}
+	h2 {
+		color: #C4C4C4;
+		border-bottom: 2px solid;
+		text-shadow: 0 1px 0 #000;
+	}
+	article pre, article pre code{
+		width: 80%;
+		padding:8px;
+		background:#222;
+		color: GoldenRod; /*#268bd2;*/
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+	}
+	footer{
+		margin-top:30px;
+		background: #333;
+		height:30px;
+		line-height: 30px;
+		text-align:center;
+		color:#C4C4C4;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+	}
+	a, a:link{color:#09f;text-decoration:none;border-bottom:1px dotted;}
+	a:hover{color:#369;border-bottom:1px solid;}
+	.button {
+		background: #369;
+		background: -webkit-linear-gradient(top, #369, #09f);
+		background: -moz-linear-gradient(top, #369, #09f);
+		background: -o-linear-gradient(top, #369, #09f);
+		background: -ms-linear-gradient(top, #369, #09f);
+		background: linear-gradient(top, #369, #09f);
+		width: 200px;
+		height: 50px;
+		padding: 10px;
+		margin: 20px auto 5px;
+		text-align: center;
+		font: 20px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+		display: block;
+		-webkit-box-shadow: 0 1px 3px #09f inset;
+		-moz-box-shadow: 0 1px 3px #09f inset;
+		box-shadow: 0 1px 3px #09f inset;
+	}
+	.button:hover {
+		background: #09f;
+		background: -webkit-linear-gradient(bottom, #369, #09f);
+		background: -moz-linear-gradient(bottom, #369, #09f);
+		background: -o-linear-gradient(bottom, #369, #09f);
+		background: -ms-linear-gradient(bottom, #369, #09f);
+		background: linear-gradient(bottom, #369, #09f);
+		-webkit-box-shadow: 0 1px 3px #000 inset;
+		-moz-box-shadow: 0 1px 3px #000 inset;
+		box-shadow: 0 1px 3px #000 inset;
+		color: #ddd;
+		text-shadow: 0 -1px 0 #000;
+	}
+	a.button {
+		color:#fff;
+		text-shadow:0 1px 0 #000;
+		text-decoration: none;
+		border:none;
+		padding:0;
+		line-height:50px;
+	}
+	.clear{clear:both;}
+
+	article{		
+		background:#333;
+		background: rgba(0,0,0,0.2);
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
 		margin:10px 0;
 		padding: 15px;
 	}
-		article h2{
-			border-bottom:2px solid #ccc;
-		}
+		article h2{border-bottom:2px solid #ccc;}
 			article h2:first-child{margin-top:0px;}
-		article h3 {
-			border-bottom:1px solid #555;
-			width:80%;
+		article h3 {border-bottom:1px solid #555;width:80%;}
+		article code{
+			background:#ccc;
+			padding:5px;
+			color:#222;
+			display: inline-block;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
 		}
+		::selection{background: #369; color:#fff;}
+		::-moz-selection{background: #369; color:#fff;}
 
-
-	footer{
-		background:#000;
-		background:rgba(0,0,0,0.7);
-		-webkit-border-radius: 25px;
-		-moz-border-radius: 25px;
-		border-radius: 25px;
-		text-align:center;
-		color:#fff;
-		padding:1px;
-		font-size:14px;
-	}
-
-	a, a:link{
-		color: #369;
-		text-decoration:none;
-		border-bottom: 1px dotted;
-	}
-	a:hover{
-		color:#09f;
-		border-bottom: 1px solid;
-	}
 }

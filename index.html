@@ -1,4 +1,4 @@
-<DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<title>PrinTrac.php - Track Website Visitors Printing Your Pages</title>
@@ -13,20 +13,21 @@
 	<header>
 		<h1>PrinTrac.php</h1>
 		<span>How Often Are Your Webpages Being Printed?</span>
+		<a id="creator" href="http://mad9scientist.com/">M</a>
 	</header>
 
 	<article>
 		
 	<h2>What is PrinTrac.php?</h2>
 	<p>PrinTrac.php is a simple script that tracks how often users print your web pages by using a invisible tracking image that is included in your print stylesheet.</p>
-
+	<a href="http://mad9scientist.com/projects/printracphp/" class="button">Try the Demo</a>
 	<h2>Concept and Origin</h2>
 	<p>This idea is from ShopTalkShow Host Chris Coyier and a user submitted question (Sorry I don't remember the listener's name) from <a href="http://shoptalkshow.com/episodes/006-with-zoe-gillenwater/" title="ShopTalk Show">ShopTalk Show - Episode 006 with Zoe Gillenwater</a>.</p>
 
 	<h2>Why Should I Use It?</h2>
 	<p>There isn't really a great reason to use it. It's just some simple statistics about your website visitor's printing habits.</p>
 
-	<h3>Installation</h3>
+	<h2>Installation and Use</h2>
 	<ol>
 		<li>Place printrac.php into your site's image directory or anywhere you want.</li>
 		<li>Create a directory in the same folder named 'logs'</li>
@@ -38,27 +39,18 @@
     width: 1px;
     display:block;
 }</code></pre></li>
-		<li>Paste the below code into the header of your pages, before anything else.
-	<pre><code>&lt;?php
-	$printracPage = $_SERVER['REQUEST_URI'];
-	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
-	echo '&lt;div class='printracphp-ie' style='display:none;'&gt;&lt;/div&gt;';
-?&gt;</code></pre></li>
+		<li>Insert the below script tag before the closing body tag on your webpages you want to track.
+	<pre><code>&lt;script src="/path/to/printrac.php?js"&gt;&lt;/script&gt;</code></pre></li>
 		<li>That's it!</li>
 	</ol>
 
 	<h3>View Logs</h3>
 	<p>To view the logs that are created by PrinTracs visits the following link:</p>
-	<code>http://www.your-domain-name.example.com/path/to/printrac.php?view</code>
-
-	<p><i>The default log is just the raw data outputted</i></p>
-
-	<p>If you want a nicer interface go to</p>
 	<code>http://www.your-domain-name.example.com/path/to/printrac.php?gui<br>http://www.your-domain-name.example.com/path/to/printrac.php?view=gui</code>
 
 	<h2>Try it out!</h2>
 	<p>Open the the below page and do a print preview of that page. Then click the link label View Logs. If you view the newest records at the bottom of the page you should see your IP and the date/time you "Printed" the page.</p>
-	<p><a href="http://mad9scientist.com/projects/printracphp/">PrinTrac.php Demo</a></p>
+	<a href="http://mad9scientist.com/projects/printracphp/" class="button">Try the Demo</a>
 	<p><a href="http://github.com/mad9scientist/PrinTrac.php/">Follow PrinTrac.php on GitHub</a></p>
 
 	</article>
