@@ -30,7 +30,7 @@
 		<ol>
 			
 		<li>
-			<p>The first thing you need to do is upload <code>printrac.php</code> to your website, for example to own directory. Next you need to create a directory in the same folder that <code>printrac.php</code> is, so it can have a location to store the logs. You need to create a directory named <code>logs</code>.</p>			
+			<p>The first thing you need to do is upload <code>printrac.php</code> to your website, for example to its own directory. Next you need to create a new directory in the same folder that <code>printrac.php</code> is in, so it can have a location to store the logs. You need to create a directory named <code>logs</code>.</p>			
 		</li>
 
 		<li>
@@ -52,7 +52,7 @@
 			<pre><code>@media screen{
   # Your Current CSS is here
 }</code></pre>
-			<p>Then add the above code either above or below your the current CSS that is now wrapped with the <code>@media screen</code>.</p>
+			<p>Then add the above code either above or below your the current CSS that is now wrapped with the <code>@media print</code>.</p>
 		</li>
 
 		<li>
