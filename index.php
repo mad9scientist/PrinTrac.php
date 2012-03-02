@@ -1,10 +1,4 @@
-<?php
-	$printracPage = $_SERVER['REQUEST_URI'];
-	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
-	echo "<div class='printracphp-ie' style='display:none;'></div>";
-?>
-
-<DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<title>PrinTrac.php - Track Website Visitors Printing Your Pages</title>
@@ -14,7 +8,7 @@
 	<![endif]-->
 </head>
 <body>
-	<a href="http://github.com/mad9scientist/PrinTrac.php/"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+	<a href="http://github.com/mad9scientist/PrinTrac.php/"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 10;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
 
 	<header>
 		<h1>PrinTrac.php</h1>
@@ -36,7 +30,7 @@
 	<ol>
 		<li>Place printrac.php into your site's image directory or anywhere you want.</li>
 		<li>Create a directory in the same folder named 'logs'</li>
-		<li>In your Print CSS file Include the following code:
+		<li>In your Print Stylesheet, include the following code:
 			<pre><code>body:after, .printracphp-ie{
     background: url(/path/to/printrac.php?track);
     content: url(/path/to/printrac.php?track);
@@ -44,12 +38,8 @@
     width: 1px;
     display:block;
 }</code></pre></li>
-		<li>Paste the below code into the header of your pages, before anything else.
-	<pre><code>&lt;?php
-	$printracPage = $_SERVER['REQUEST_URI'];
-	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
-	echo '&lt;div class='printracphp-ie' style='display:none;'&gt;&lt;/div&gt;';
-?&gt;</code></pre></li>
+		<li>Insert the below script tag before the closing body tag of your pages
+	<pre><code>&lt;script src="/path/to/printrac.php?js"&gt;&lt;script&gt;</code></pre></li>
 		<li>That's it!</li>
 	</ol>
 
@@ -74,6 +64,6 @@
 		<p>PrinTrac.php is Maintained by <a href="http://mad9scientist.com">Chris Holbrook</a>
 		<?php echo ' &mdash; ' . date('M Y'); ?></p>
 	</footer>
-
+	<script src="printrac.php?js"></script>
 </body>
 </html>

@@ -9,8 +9,9 @@
 */
 
 /* Settings */
-#if on Windows change the below line to "\logs\\"
-$location = getcwd()."/logs/";		#File Location 
+define('DS', DIRECTORY_SEPARATOR);
+
+$location = getcwd().DS."logs".DS;	#File Location
 $filename = "printrac_logs.txt"; 	#Log Filename
 
 #Google Analytics
@@ -31,6 +32,7 @@ if(isset($_GET['view']) && $_GET['view'] <> 'gui'){view();}
 if(isset($_GET['view']) && $_GET['view'] === 'gui' || isset($_GET['gui'])){gui();}
 if(isset($_GET['hdrTrackCode'])){hdrTracker();}
 if(isset($_GET['css'])){css();}
+if(isset($_GET['js'])){jsTrack();}
 
 function track(){
 	# printrac.php?track
@@ -143,6 +145,7 @@ function gui(){
 }
 
 function hdrTracker(){
+	# Print Header Code, Deprecated by Javascript Link
 	$printracPage = $_SERVER['REQUEST_URI'];
 	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
 	echo "<div class='printracphp-ie' style='display:none;'></div>";
@@ -343,6 +346,25 @@ a:hover{
 }
 .clear{clear:both;}
 ";
+}
+
+function jsTrack(){
+	header("Content-type: application/javascript"); 
+	print "var element, body;
+
+// Create a Cookie with current page
+document.cookie = 'currentpage-printrac-php='+document.URL+'; path=/';
+
+// Inject an element into the DOM
+element = document.createElement('div');
+element.className = 'printracphp-ie';
+element.style.display = 'none';
+
+body = document.getElementsByTagName('body')[0];
+body.appendChild(element);
+
+";
+
 }
 
 /*
