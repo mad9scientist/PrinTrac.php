@@ -1,9 +1,3 @@
-<?php
-  # PrinTrac.php Tracking Code | http://mad9scientist.github.com/PrinTrac.php/
-  $printracPage = $_SERVER['REQUEST_URI'];
-  setcookie('currentpage-printrac-php', $printracPage, 0, "/");
-  echo '<div class="printracphp-ie" style="display:none;"></div>';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,10 +8,11 @@
 	<![endif]-->
 </head>
 <body>
-	<a href="http://github.com/mad9scientist/PrinTrac.php/"><img alt="Fork me on GitHub" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" style="position: fixed; top: 0; right: 0; border: 0; z-index: 10"></a>
+	<a href="http://github.com/mad9scientist/PrinTrac.php/"><img alt="Fork me on GitHub" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" style="position: fixed; top: 0; right: 0; border: 0;"></a>
 	<header>
 		<h1><a href="http://mad9scientist.com/projects/printracphp/" id="logo">PrinTrac.php</a></h1>
 		<span>Website Printing Stats, for the Curious</span>
+		<a href="http://mad9scientist.com/" id="creator">M</a>
 	</header>
 
 	<section>
@@ -39,13 +34,9 @@
 		</li>
 
 		<li>
-			<p>Now that <code>PrinTrac.php</code> is on your website you need to add the following code to the very top of your webpages, it is <b>Very Important</b> to place it before anything is outputted to the page, so place even above your doctype declaration or your opening HTML tag.</p>
-			<pre><code>&lt;?php
-  # PrinTrac.php Tracking Code | http://mad9scientist.github.com/PrinTrac.php/
-  $printracPage = $_SERVER['REQUEST_URI'];
-  setcookie('currentpage-printrac-php', $printracPage, 0, "/");
-  echo '&lt;div class="printracphp-ie" style="display:none;"&gt;&lt;/div&gt;';
-?&gt;</code></pre>
+			<p>Now that <code>PrinTrac.php</code> is on your website you need to add the following code to your webpages. Place the below code right before the closing body tag on your webpages</p>
+			<pre><code>&lt;!-- PrinTrac.php Tracking Code - http://madscitech.com/m/10 --&gt;
+&lt;script src="/path/to/printrac.php?js"&gt;&lt;/script&gt;</code></pre>
 		</li>
 
 		<li>
@@ -69,6 +60,10 @@
 		</li>
 
 		</ol>
+
+		<h4>Viewing the Logs</h4>
+		<p>To view the pretty logs that PrinTrac.php create, point your web browser to</p>
+		<pre>http://your-domain-name-here.example.com/full/path/to/printrac.php?gui</pre>
 	</section>
 
 	<section>
@@ -78,8 +73,11 @@
 			<dd>The logs are unsecure by default. The only way to access the logs, is if someone has the link to the script and URL query string.</dd>
 			<dt>How do I access the logs?</dt>
 			<dd>Visit the following URL, substituting as needed: <code>http://www.your-domain-name.com/the/full/path/to/the/file/printrac.php?gui</code>.</dd>
+			<dt>What technologies are required for this to work?</dt>
+			<dd>PHP and Javascript</dd>
+
 			<dt>I found a bug! How do I report it?</dt>
-			<dd>Thank You for Starters! You can report the bug in the <a href="https://github.com/mad9scientist/PrinTrac.php/issues">issue tracker</a> on GitHub</dd>
+			<dd>Thank You for a Start! You can report the bug in the <a href="https://github.com/mad9scientist/PrinTrac.php/issues">issue tracker</a> on GitHub or Submit it via my <a href="http://mad9scientist.com/contact/">contact form</a>.</dd>
 			<dt>What is this project licensed under?</dt>
 			<dd>BSD License, please see the bottom of PrinTrac.php file for full license.</dd>
 			<dt>I want to help the project?</dt>
@@ -90,6 +88,6 @@
 	<footer>
 		<p>Created &amp; Maintained by <a href="http://mad9scientist.com/">Chris Holbrook/Mad9Scientist</a></p>
 	</footer>
-
+	<style src="printrac.php?track"></style>
 </body>
 </html>
