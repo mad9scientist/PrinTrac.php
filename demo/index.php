@@ -28,7 +28,9 @@
 
 		<h4>Installation</h4>
 		<ol>
-			
+		<li>
+			<p>Step 0: Download PrinTrac.php from <a href="https://github.com/mad9scientist/PrinTrac.php/zipball/master">GitHub</a></p>
+		</li>	
 		<li>
 			<p>The first thing you need to do is upload <code>printrac.php</code> to your website, for example to its own directory. Next you need to create a new directory in the same folder that <code>printrac.php</code> is in, so it can have a location to store the logs. You need to create a directory named <code>logs</code>.</p>			
 		</li>
@@ -61,6 +63,8 @@
 
 		</ol>
 
+		<a class="button" href="https://github.com/mad9scientist/PrinTrac.php/zipball/master">Download & Install</a>
+
 		<h4>Viewing the Logs</h4>
 		<p>To view the pretty logs that PrinTrac.php create, point your web browser to</p>
 		<pre>http://your-domain-name-here.example.com/full/path/to/printrac.php?gui</pre>
@@ -82,6 +86,16 @@
 			<dd>BSD License, please see the bottom of PrinTrac.php file for full license.</dd>
 			<dt>I want to help the project?</dt>
 			<dd>If you want to help, you can either make a pull request on GitHub or Contact me directly via my <a href="http://mad9scientist.com/contact/">contact form</a></dd>
+			<dt>What Browsers are Supported?</dt>
+			<dd>Any browser that support CSS and Javascript. PrinTrac.php has been fully tested in:
+				<ul>
+					<li>Firefox 10</li>
+					<li>Chrome 17</li>
+					<li>Opera 11.61</li>
+					<li>Safari 5.1</li>
+					<li>Internet Explorer 8</li>
+				</ul>
+			</dd>
 		</dl>
 	</section>
 
