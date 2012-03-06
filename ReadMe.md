@@ -8,12 +8,13 @@
 
 **Goal:** This php file tracks how often users print your web pages by using a invisible tracking image that is included in your print stylesheet.
 
-**Tested Browsers:** Firefox 10, Safari 5.1, Chrome 17, Opera 11.61, Internet Explorer 8*
+**Tested Browsers:** Firefox 10, Safari 5.1, Chrome 17, Opera 11.61, Internet Explorer 8
 
 **Concept and Origin:** This idea is from ShopTalkShow Host Chris Coyier and a user submitted questions (Sorry I don't remember the users name) from [ShopTalk Show - Episode 006 with Zoe Gillenwater](http://shoptalkshow.com/episodes/006-with-zoe-gillenwater/ "ShopTalk Show")
 
 **Installation:**
 
+*	Download PrinTrac.php from [GitHub](https://github.com/mad9scientist/PrinTrac.php/zipball/master "Download")
 *	Place printrac.php into your site's image directory or anywhere you want.
 *	Create a directory in the same folder named 'logs'
 *	In your Print CSS file Include the following code:
@@ -50,5 +51,3 @@ If you want a nicer interface go to
 
 
 Check out the Demo: [PrinTrac.php Demo](http://mad9scientist.com/projects/printracphp/)
-
-* Internet Explorer may break your website and may not even fully work, I know the problem and I am working to resolve the problem.

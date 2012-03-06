@@ -31,6 +31,7 @@
 
 	<h2>Installation and Use</h2>
 	<ol>
+		<li>First Download PrinTrac.php from GitHub: <a href="https://github.com/mad9scientist/PrinTrac.php/zipball/master">Download</a></li>
 		<li>Place printrac.php into your site's image directory or anywhere you want.</li>
 		<li>Create a directory in the same folder named 'logs'</li>
 		<li>In your Print Stylesheet, include the following code:
@@ -45,6 +46,7 @@
 	<pre><code>&lt;script src="/path/to/printrac.php?js"&gt;&lt;script&gt;</code></pre></li>
 		<li>That's it!</li>
 	</ol>
+	<a href="https://github.com/mad9scientist/PrinTrac.php/zipball/master" class="button">Download &amp; Install</a>
 
 	<h3>View Logs</h3>
 	<p>To view the logs that are created by PrinTracs visits the following link:</p>
