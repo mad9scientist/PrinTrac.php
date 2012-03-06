@@ -343,7 +343,7 @@ function jsTrack(){
 // http://mad9scientist.github.com/PrinTrac.php/
 // IE Tracking Element
 
-var document, element, body;
+var element, body;
 
 // Create a Cookie with current page
 document.cookie = 'currentpage-printrac-php=' + document.URL + '; path=/';
