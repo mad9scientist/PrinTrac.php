@@ -32,6 +32,7 @@ if(isset($_GET['view']) && $_GET['view'] <> 'gui'){view();}
 if(isset($_GET['view']) && $_GET['view'] === 'gui' || isset($_GET['gui'])){gui();}
 if(isset($_GET['hdrTrackCode'])){hdrTracker();}
 if(isset($_GET['css'])){css();}
+if(isset($_GET['about'])){pagesAbout();}
 if(isset($_GET['js'])){jsTrack();}
 
 function track(){
@@ -145,6 +146,10 @@ function hdrTracker(){
 	$printracPage = $_SERVER['REQUEST_URI'];
 	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
 	echo "<div class='printracphp-ie' style='display:none;'></div>";
+}
+
+function pagesAbout(){
+	header("Location: http://mad9scientist.github.com/PrinTrac.php/");
 }
 
 
