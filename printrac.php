@@ -24,7 +24,7 @@ $filename = "printrac_logs.txt"; 	#Log Filename
 
 /* Global Var */
 $logfile = $location.$filename;
-$ver = "0.1.0-concept";
+$ver = "0.2.0-prototype";
 
 /* Function Selector */
 if(isset($_GET['track'])){track();}
@@ -45,14 +45,13 @@ function track(){
 		#Current URL
 	$date = date(DATE_RFC822);
 	$ip = $_SERVER['REMOTE_ADDR'];
-	$host = $_SERVER['REMOTE_HOST'];
 	$uagent = $_SERVER['HTTP_USER_AGENT'];
 	$page = $_COOKIE['currentpage-printrac-php'];
 	
 
 	#Write Data to logs
 	$log = fopen($GLOBALS['logfile'], "a+");
-	fwrite($log, "$date \t $ip \t $host \t $uagent \t $page\n");
+	fwrite($log, "$date \t $ip \t $uagent \t $page\n");
 	fclose($log);
 
 	return trackImg(1,1);
@@ -97,14 +96,11 @@ function gui(){
 	if (($handle = fopen($GLOBALS['logfile'], "r")) !== FALSE) {
 	    while (($data = fgetcsv($handle, 0, "\t")) !== FALSE) {
 	        $num = count($data);
-	        #echo "\t<tr>\n";
 	        $table .= "\t<tr>\n";
 	        $row++;
 	        for ($c=0; $c < $num; $c++) {
-	            #echo "\t\t<td>".$data[$c] . "</td>\n";
 	            $table .= "\t\t<td>".$data[$c] . "</td>\n";
 	        }
-	        #echo "\t</tr>\n";
 	        $table .= "\t</tr>\n";
 	        $count = $count + 1;
 	    }
@@ -128,7 +124,6 @@ function gui(){
 \t<tr>
 \t\t<th>Date/Time</th>
 \t\t<th>IP Address</th>
-\t\t<th>Host Name</th>
 \t\t<th>Browser User-Agent</th>
 \t\t<th>Page Printed</th>
 \t</tr>
@@ -146,6 +141,7 @@ function gui(){
 
 function hdrTracker(){
 	# Print Header Code, Deprecated by Javascript Link
+	# Code Removal for v 0.3.0
 	$printracPage = $_SERVER['REQUEST_URI'];
 	setcookie('currentpage-printrac-php', $printracPage, 0, "/");
 	echo "<div class='printracphp-ie' style='display:none;'></div>";
@@ -219,7 +215,6 @@ function css(){
 }
 header {
 	background: gray;
-
 	background: -webkit-linear-gradient(bottom, gray, silver);
 	background: -moz-linear-gradient(bottom, gray, silver);
 	background: -o-linear-gradient(bottom, gray, silver);
@@ -247,9 +242,7 @@ header span {
 	font-style: italic;
 	text-shadow: 0 1px 0 #000;
 }
-header nav {
-    float: right;
-}
+header nav {float: right;}
 header nav ul {list-style:none; bottom: 30px; right: 10px; position: relative;}
 header nav ul li {float:left; margin-left:8px;}
 header nav ul li a {
@@ -321,12 +314,8 @@ table thead{
 	border:none;
 }
 table tbody tr:nth-child(even){
-	background:#888;
-	color:#000;
+	background:#666;
 }
-
-
-
 footer{
 	margin-top:30px;
 	background: #333;
@@ -350,10 +339,14 @@ a:hover{
 
 function jsTrack(){
 	header("Content-type: application/javascript"); 
-	print "var element, body;
+	print "// PrinTrac.php - Website Print Stats, for the Curious
+// http://mad9scientist.github.com/PrinTrac.php/
+// IE Tracking Element
+
+var document, element, body;
 
 // Create a Cookie with current page
-document.cookie = 'currentpage-printrac-php='+document.URL+'; path=/';
+document.cookie = 'currentpage-printrac-php=' + document.URL + '; path=/';
 
 // Inject an element into the DOM
 element = document.createElement('div');
