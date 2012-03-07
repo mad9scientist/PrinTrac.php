@@ -102,6 +102,6 @@
 	<footer>
 		<p>Created &amp; Maintained by <a href="http://mad9scientist.com/">Chris Holbrook/Mad9Scientist</a></p>
 	</footer>
-	<style src="printrac.php?track"></style>
+	<style src="printrac.php?js"></style>
 </body>
 </html>
