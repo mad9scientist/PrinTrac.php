@@ -102,6 +102,7 @@
 	<footer>
 		<p>Created &amp; Maintained by <a href="http://mad9scientist.com/">Chris Holbrook/Mad9Scientist</a></p>
 	</footer>
-	<style src="printrac.php?js"></style>
+	<!-- PrinTrac.php Tracking Code - http://madscitech.com/m/10 -->
+  	<script src="printrac.php?js"></script>
 </body>
 </html>
