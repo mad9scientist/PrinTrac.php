@@ -4,7 +4,7 @@
 	<title>PrinTrac.php - Demo Site</title>
 	<link rel="stylesheet" href="css/style.css" />
 	<!--[if lt IE 9]>
-		<script src='//html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+		<script src='http://global.staticookie.com/js/html5shiv.js'></script>
 	<![endif]-->
 </head>
 <body>
