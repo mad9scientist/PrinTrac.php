@@ -1,7 +1,7 @@
 <?php 
 
 /*
-	PrinTrac.php (v. 0.1.0)
+	PrinTrac.php (v. 0.2.1)
 		Get Stats on Users Printing Your Web Pages
 		Created by: Chris Holbrook (http://mad9scientist.com/)
 		Licensed Under BSD License
@@ -24,7 +24,7 @@ $filename = "printrac_logs.txt"; 	#Log Filename
 
 /* Global Var */
 $logfile = $location.$filename;
-$ver = "0.2.0-prototype";
+$ver = "0.2.1-prototype";
 
 /* Function Selector */
 if(isset($_GET['track'])){track();}
@@ -62,8 +62,11 @@ function track(){
 		# creates tracking images (only can be called for track function)
 		
 		header("Content-type: image/png");
-		header("Cache-Control: no-cache, must-revalidate");
 		header("Expires: Sat, 1 Jan 2000 00:00:00 GMT");
+		header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
+		header("Cache-Control: no-store, no-cache, must-revalidate");
+		header("Cache-Control: post-check=0, pre-check=0", false);
+		header("Pragma: no-cache");
 		$handle = ImageCreate ($w, $h) or die ("Cannot Create image"); 
 	 	$bg_color = ImageColorAllocateAlpha ($handle, 0, 0, 0, 0); 
 	 	ImagePng ($handle); 
