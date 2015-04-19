@@ -4,7 +4,7 @@
 
 **[GitHub Repo](https://github.com/mad9scientist/PrinTrac.php/ "GitHub")**
 
-**Check out the Demo:** [PrinTrac.php Demo](http://mad9scientist.com/projects/printracphp/)
+**Check out the Demo:** [PrinTrac.php Demo](http://mad9scientist.com/projects/printrac-php/)
 
 **Goal:** This php file tracks how often users print your web pages by using a invisible tracking image that is included in your print stylesheet.
 
@@ -51,4 +51,4 @@ If you want a nicer interface go to
 	http://www.your-domain-name.example.com/path/to/printrac.php?gui
 
 
-Check out the Demo: [PrinTrac.php Demo](http://mad9scientist.com/projects/printracphp/)
+Check out the Demo: [PrinTrac.php Demo](http://mad9scientist.com/projects/printrac-php/)
